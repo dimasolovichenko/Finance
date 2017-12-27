@@ -1,60 +1,123 @@
-// ------------------------------------------------------------------------------------------
+.list-services
+    margin: 0 -15px
+    .list-item
+        margin: 0 15px
+        &:hover
+            cursor: pointer
+        &:hover .card-foreground
+            display: none
+        &:hover .card-hover
+            display: flex
+
 
 .card-service
     min-height: 275px
+    .card-foreground
+        padding: 20px
     svg
         width: 100px
         height: 100px
 
-
 // ------------------------------------------------------------------------------------------
-.section-news .section-actions .button
+
+.section-news .section-actions .button-sm
     color: #000
+    &:hover
+        color: #f15a22
+.section-news
+    .slider-news
+        margin-bottom: 0 !important
+    .slick-dots li button:before
+        color: #000
+        opacity: 0.3
+        font-size: 12px
+    .slick-dots li.slick-active button:before
+        color: #f15a22
+        opacity: 1
+    .slick-dots
+        position: static
+        margin-top: 50px
+
+.list-news
+    margin: 0 -15px
+    .list-item
+        margin: 0 15px
+        &:hover
+            cursor: pointer
+        &:hover .card-foreground
+            display: none
+        &:hover .card-hover
+            display: flex
+
 
 .card-news
+    height: 350px
     text-align: center
-    padding: 60px
+    padding: 30px
     color: #fff
-    min-height: 350px
     .card-title
         font-size: 30px
-        font-family: 'Europe Bold', sans-serif
+        font-family: $fontB
     .card-description
         line-height: 35px
         font-size: 25px
 
 // ------------------------------------------------------------------------------------------
+
+.card-info
 .card-info .card-background
     color: #fbcebd
-    font-family: 'Europe Bold', sans-serif
+    font-family: $fontB
     font-size: 130px
 .card-info .card-title
+    margin-top: 65px
     font-size: 20px
+
 // ------------------------------------------------------------------------------------------
+
 .section-main
     padding: 0
     height: 90vh
     .section-body
         height: 100%
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
+        display: block
     .section-title
         font-size: 55px
     .section-description
+        font-family: $fontMyriadPro
         font-size: 27px
+    .slick-dots li button:before
+        color: #fff
+        opacity: 0.6
+        font-size: 12px
+    .slick-dots li.slick-active button:before
+        color: #f15a22
+        opacity: 1
+    .section-foreground > .container
+        width: 100%
+        .slide
+            padding: 0 50px
+    .slick-dots
+        position: absolute
+        bottom: -180px
+    
+
 
 // ------------------------------------------------------------------------------------------
+
 .section-consultation
+    padding: 50px 0
     background: #387fb7
     background: -moz-linear-gradient(left, #387fb7 0%, #02d0fd 100%)
     background: -webkit-linear-gradient(left, #387fb7 0%,#02d0fd 100%)
     background: linear-gradient(to right, #387fb7 0%,#02d0fd 100%)
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#387fb7', endColorstr='#02d0fd',GradientType=1 )
     form
-        justify-items: center
+        display: flex
+        flex-direction: column
+        align-items: center
         input
+            margin-bottom: 20px
             width: 550px
             padding: 15px 25px
             border: none
@@ -62,50 +125,65 @@
             font-size: 20px
             &::plaseholder
                 color: #b6b6b6
-    .button
-        justify-self: center
+    button
         margin-top: 30px
     .section-heading span
-        font-family: 'Europe Bold', sans-serif
+        font-family: $fontB
 
 // ------------------------------------------------------------------------------------------
+
 .section-contacts
     padding-bottom: 0
     background-color: #000f29
+    .section-foreground
+        display: block
     .section-body
-        display: grid
-        padding: 50px 0
+        display: flex
+        padding-bottom: 40px
         .left
             text-align: left
+            .map
+                border-radius: 10px
+                overflow: hidden
             & > *:not(:last-child)
                 margin-bottom: 20px
                 font-size: 20px
         .right
-            padding: 50px
+            padding: 30px
             display: flex
             flex-direction: column
             align-items: center
             .section-subtitle
-                font-family: 'Europe Bold', sans-serif
+                font-family: $fontB
                 font-size: 27px
     form
-        margin-top: 100px
+        margin-top: 70px
         display: flex
         flex-direction: column
         align-items: center
+        width: 100%
         input
-            width: 600px
+            width: 100%
             padding: 25px 30px
             border: none
             border-radius: 70px
             background-color: #808794
-            font-family: 'Europe Normal', sans-serif
+            font-family: $fontN
             font-size: 20px
             color: #fff
             &::placeholder
                 color: #fff
-        .button
-            margin-top: 100px
+        button
+            margin-top: 70px
     .nav-socials
         justify-content: flex-start
+        .nav-item
+            margin: 5px
+            a
+                width: 40px
+                height: 40px
+                font-size: 27px
+                border-radius: 30px
+                line-height: 40px
+
 // ------------------------------------------------------------------------------------------

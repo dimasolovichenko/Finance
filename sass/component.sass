@@ -33,11 +33,12 @@
         margin-bottom: 40px
 
 .section-title
-    font-family: 'Europe Bold', sans-serif
+    font-family: $fontB
+    font-weight: bold
     font-size: 40px
 
 .section-subtitle
-    font-family: 'Europe Normal', sans-serif
+    font-family: $fontN
     font-size: 27px
 
 .section-actions
@@ -46,9 +47,12 @@
 .card
     text-align: center
     position: relative
-    padding: 50px
     border-radius: 10px
     overflow: hidden
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     &-background
         position: absolute
         top: 0
@@ -62,6 +66,9 @@
             height: 100%
             object-fit: cover
     &-foreground
+        width: 100%
+        height: 100%
+        padding: 20px
         position: relative
         display: flex
         flex-direction: column
@@ -69,6 +76,13 @@
         align-items: center
         & > *:not(:last-child)
             margin-bottom: 30px
+    &-hover
+        position: relative
+        display: none
+        a
+            color: #000
+        a:hover
+            color: #f15a22
     &-title
         font-size: 23px
 
@@ -90,12 +104,17 @@
         display: flex
         justify-content: center
         align-items: center
+    .menu
+        display: none
+        i
+            font-size: 30px
+            color: #333
 
-.page-lang
-    margin-left: 30px
+.page-lang, .menu
+    margin-left: 25px
 
     select
-        font-family: 'Europe Normal', sans-serif
+        font-family: $fontN
         font-size: 12px
         text-transform: uppercase
         padding: 6px
@@ -121,6 +140,7 @@
             line-height: 30px
             border-radius: 20px
 
+
         .facebook
             background-color: #3b5998
 
@@ -138,32 +158,42 @@
     background-color: rgba(72, 94, 136, 0.2)
 
 .nav-header
-    padding: 15px 0
     margin: 0 -10px
     display: flex
     justify-content: space-between
     align-items: center
     flex-wrap: wrap
-
-
     .nav-item
-        color: #fff
-        font-size: 20px
-        text-decoration: none
-        font-weight: 400
-        padding: 10px 15px
+        position: relative
+        a
+            display: block
+            padding: 25px 5px
+            color: #fff
+            font-size: 20px
+            text-decoration: none
+            font-weight: 400
 
-    .authorization
-
-        .active
-            background-color: var(--accent-color) !important
-            color: #fff !important
-
+.dropdown
+    position: absolute
+    top: 100%
+    left: -30px
+    display: none
+    flex-direction: column
+    background: transparent
+    .dropdown-item
+        text-align: center
+        width: 200px
+        border-top: 2px solid transparent
+        background-color: rgba(72, 94, 136, 0.2)
+        background-clip: padding-box
+        a
+            padding: 8px
+.nav-header .nav-item:hover .dropdown
+    display: flex
 /*-------------------------FOOTER---------------------------------------------------*/
 .footer
     background-color: #000f29
     padding: 20px 0 60px 0
-
     &-content
         display: flex
         flex-direction: column
@@ -171,3 +201,5 @@
         text-align: center
     .footer-right
         padding: 20px
+    .nav-header
+        margin: 0

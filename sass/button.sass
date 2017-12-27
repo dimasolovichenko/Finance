@@ -1,25 +1,74 @@
-.button
+.button-bg-lg
     display: inline-block
     text-decoration: none
     color: #fff
-    background-color: transparent
     font-size: 18px
-    border: 2px solid #f15a22
+    border-radius: 70px
+    margin: 0 5px
+    cursor: pointer
+    background-color: #f15a22
+    padding: 18px 20px
+    &:hover,
+        background: rgba(241,167,71,1)
+        background: -moz-linear-gradient(left, rgba(241,167,71,1) 0%, rgba(241,90,34,1) 100%)
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241,167,71,1)), color-stop(100%, rgba(241,90,34,1)))
+        background: -webkit-linear-gradient(left, rgba(241,167,71,1) 0%, rgba(241,90,34,1) 100%)
+        background: -o-linear-gradient(left, rgba(241,167,71,1) 0%, rgba(241,90,34,1) 100%)
+        background: -ms-linear-gradient(left, rgba(241,167,71,1) 0%, rgba(241,90,34,1) 100%)
+        background: linear-gradient(to right, rgba(241,167,71,1) 0%, rgba(241,90,34,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1a747', endColorstr='#f15a22', GradientType=1 )
+
+.button-bg-sm
+    display: inline-block
+    text-decoration: none
+    color: #fff
+    font-size: 18px
     border-radius: 70px
     padding: 10px 50px
-    margin: 5px
+    margin: 0 5px
     cursor: pointer
-
+    background-color: #f15a22
     &:hover,
-    &:focus
-        color: #fff
-        background-color: #f15a22
-        border-color: #f15a22
+        background: rgba(241,167,71,1)
+        background: -moz-linear-gradient(left, rgba(241,167,71,1) 0%, rgba(241,90,34,1) 100%)
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241,167,71,1)), color-stop(100%, rgba(241,90,34,1)))
+        background: -webkit-linear-gradient(left, rgba(241,167,71,1) 0%, rgba(241,90,34,1) 100%)
+        background: -o-linear-gradient(left, rgba(241,167,71,1) 0%, rgba(241,90,34,1) 100%)
+        background: -ms-linear-gradient(left, rgba(241,167,71,1) 0%, rgba(241,90,34,1) 100%)
+        background: linear-gradient(to right, rgba(241,167,71,1) 0%, rgba(241,90,34,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1a747', endColorstr='#f15a22', GradientType=1 )
 
-    &-sm
+.button-sm
+    display: inline-block
+    text-decoration: none
+    color: #fff
+    font-size: 18px
+    border-radius: 70px
+    margin: 0 5px
+    cursor: pointer
+    border: 2px solid #f15a22
+    padding: 10px 50px
+    &:hover,
+        color: #f15a22
+
+.authorization
+    .button-bg-sm
+        padding: 8px 35px
         font-size: 15px
-        padding: 7px 50px
-    &-lg
-        padding: 18px 20px
-    &-bg
-        background-color: #f15a22
+    .button-sm
+        padding: 6px 50px
+        font-size: 15px
+
+
+.button-lang
+    display: none
+    vertical-align: middle
+    width: 35px
+    height: 35px
+    text-align: center
+    line-height: 32px
+    font-size: 12px
+    text-transform: uppercase
+    color: #333
+    border: 2px solid #333
+    border-radius: 50px
